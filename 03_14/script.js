@@ -6,6 +6,7 @@
  */
 
 import Backpack from "./Backpack.js";
+import Book from "./Book.js";
 
 const everydayPack = new Backpack(
   "Everyday Backpack",
@@ -18,6 +19,27 @@ const everydayPack = new Backpack(
   "December 5, 2018 15:00:00 PST"
 );
 
-console.log("The everydayPack object:", everydayPack);
-console.log("The pocketNum value:", everydayPack.pocketNum);
-console.log("Days since aquired:", everydayPack.backpackAge());
+const book1 = new Book(
+  200,
+  "My First",
+  "Fantasty",
+  false
+)
+
+const book2 = new Book(
+  300,
+  "My Second",
+  "Comedy",
+  true
+)
+
+const book3 = new Book(
+  400,
+  "My Fourth",
+  "Thriller",
+  true
+)
+
+console.log(everydayPack)
+console.log(book1, book1.closeCover(true));
+
