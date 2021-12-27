@@ -60,3 +60,26 @@ newArticle.setAttribute("id", "everyday");
 newArticle.innerHTML = content;
 
 main.append(newArticle);
+
+//create the actual content for the nav: the links
+const navContent = ` 
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+      <li><a href="#">Link 4</a></li>
+      <li><a href="#">Link 5</a></li>
+`;
+
+const mainNav = document.createElement("nav"); //create a new nav element mainNav
+const navList = document.createElement("ul") //create a new ul element and assign to navList
+
+mainNav.classList.add("main-navigation"); //add main-navigation class to mainNav element
+
+navList.innerHTML = navContent; //set the innerHTML of navList to navContent
+
+mainNav.append(navList); //append navList to mainNav
+
+document.querySelector(".siteheader").append(mainNav); //append everything we did to siteheader
+
+
+
