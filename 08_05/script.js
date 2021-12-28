@@ -12,13 +12,16 @@ const greenPack = {
   color: "green",
   volume: 8,
   pocketNum: 3,
-  newVolume: function (volume) {
+  newVolume: function (adjustVolume) {
     console.log("this.volume in the method:", this.volume);
-    this.volume = volume;
+    this.volume = adjustVolume;
     console.log("this.volume after update:", this.volume);
-    // (function () {
-    //   console.log("this.volume in nested function:", this.volume);
-    // })();
+    (function () {
+      console.log("this.volume in nested function:", this.volume);
+    })();
+    (() => {
+      console.log("this.volume in nested arrow function:", this.volume);
+    })();
   },
 };
 
