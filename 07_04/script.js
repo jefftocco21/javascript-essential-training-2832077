@@ -9,3 +9,34 @@
  */
 
 
+const colors = [
+    "red",
+    "blue",
+    "yellow",
+    "green",
+    "orange"
+];
+
+console.log(colors);
+
+console.log(colors.pop()); //show the item being popped
+
+console.log(colors); //show array - last item
+
+colors.unshift(colors.pop()); //pop last item, make it first
+
+console.log(colors);
+
+colors.sort(); //sort alphabetically
+
+console.log(colors);
+
+const foundItem = colors.find(item => item === "green"); //find a specific item
+console.log(foundItem); //print found item
+
+colors.splice(colors.indexOf(foundItem), 1);
+
+console.log(colors);
+
+
+
