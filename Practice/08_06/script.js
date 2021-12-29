@@ -1,19 +1,20 @@
-const main = document.querySelector(".maincontent");
-const notmain = document.querySelector(".notmain");
+var world = "World";
+var again = "Again";
 
-function practice(param){
-    param.innerHTML = `<h1>Hello World</h1>`;
+const main = document.createElement("span");
+const notMain = document.createElement("span");
+
+function append(param) {
+  document.querySelector(".yep").append(param);
 }
 
-practice(main);
-
-const morePractice = function(param){
-    param.innerHTML = `<h1>Hello Again</h1>`;
+function input(input, word) {
+  input.classList.add(".yep");
+  input.innerHTML = `<h1>Hello ${word}</h1>`;
 }
 
-practice(main);
-morePractice(notmain);
+append(main);
+append(notMain);
 
-
-
-
+input(main, world);
+input(notMain, again);
