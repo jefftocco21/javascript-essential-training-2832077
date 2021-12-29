@@ -12,15 +12,15 @@ const greenPack = {
   color: "green",
   volume: 8,
   pocketNum: 3,
-  newVolume: function (adjustVolume) {
-    console.log("this.volume in the method:", this.volume);
-    this.volume = adjustVolume;
-    console.log("this.volume after update:", this.volume);
+  newVolume: function (volume) {
+    console.log("this.volume in the method", this.volume);
+    this.volume = volume;
+    console.log("this.volume after update", volume);
     (function () {
-      console.log("this.volume in nested function:", this.volume);
+      console.log("this.volume in nexted function: ", this.volume); //will be 20 since function declaration is hoisted to global scope
     })();
     (() => {
-      console.log("this.volume in nested arrow function:", this.volume);
+      console.log("arrow function volume: ", this.volume); //arrow function is now globally scoped, will find nearest this
     })();
   },
 };
