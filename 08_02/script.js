@@ -10,18 +10,25 @@ function doSomeMath(a, b) {
 }
 
 // Function expression:
-const doMoreMath = function (a = 3, b = 2) {
+const moreMath = function (a, b) {
   let c = a * b;
   return c;
 };
 
-console.log("Do some math:", doSomeMath(5, 6));
-console.log("Do more math:", doMoreMath(5, 6));
+console.log("Do some math: ", doSomeMath(5, 6));
+console.log("Do some more math: ", moreMath(5, 6));
 
-// Immediately Invoked Function Expression (IIFE)
-// (function () {
-//   let a = 4;
-//   let b = 6;
-//   let c = doSomeMath(a, b);
-//   console.log(`The sum of a and b is: ${c}`);
-// })();
+const weirdMath = function (a, b) {
+  let c = a * b;
+  return c;
+};
+
+console.log("Weird math: ", weirdMath(doSomeMath(5, 6), moreMath(5, 6)));
+
+// Immediately invokved function expression:
+(function () {
+  let a = 5;
+  let b = 7;
+  let c = doSomeMath(a, b);
+  console.log(`Immediately: ${c}`);
+})();
