@@ -22,3 +22,10 @@ body {
   height: 6rem;
   background-color: hsl(0, 0%, 90%);
 }
+
+.blue {
+  background-color: hsl(204, 100%, 62%);
+}
+.red {
+  background-color: red;
+}
